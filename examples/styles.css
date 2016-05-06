@@ -1,0 +1,32 @@
+label
+{
+    display: inline-block;
+    width: 10em;
+}
+
+input
+{
+    padding: 0.25em;
+}
+
+section>div
+{
+    margin: 0.25em;
+}
+
+input.valid {
+    border: 1px solid green;
+    background-color: rgba(0,255,0,0.1);
+}
+
+input.invalid {
+    border: 1px solid red;
+    background-color: rgba(255,0,0,0.1);
+}
+
+.validation-error-container,
+.validation-summary-entry
+{
+    color: red;
+    padding: 0.5em;
+}

@@ -1,0 +1,27 @@
+<template>
+    <h2>Validate with nested objects and iterated elements</h2>
+    <section validation-group.bind="validationGroup">
+        <div>
+            <label check="">Some Number</label>
+            <input value.bind="model.someNumber" validate-property="someNumber" />
+        </div>
+        <div>
+            <label>Some Text</label>
+            <input value.bind="model.someText" validate-property="someText"/>
+        </div>
+        <div>
+            <label>Some Nested Number</label>
+            <input value.bind="model.someNestedObject.someNumber" validate-property="someNestedObject.someNumber"/>
+        </div>
+        <div validate-property="someArray"></div>
+        <div repeat.for="i of model.someArray.length">
+            <label>Some Array - Index ${i + 1}</label>
+            <input value.bind="model.someArray[i]" validate-property.bind="'someArray[' + i + ']'"/>
+        </div>
+    </section>
+
+    <h2>Validation Summary element</h2>
+    <section validation-group.bind="validationGroup">
+        <validation-summary></validation-summary>
+    </section>
+</template>
