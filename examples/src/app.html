@@ -2,7 +2,7 @@
     <h2>Validate with nested objects and iterated elements</h2>
     <section validation-group.bind="validationGroup">
         <div>
-            <label check="">Some Number</label>
+            <label>Some Number</label>
             <input value.bind="model.someNumber" validate-property="someNumber" />
         </div>
         <div>
@@ -23,5 +23,27 @@
     <h2>Validation Summary element</h2>
     <section validation-group.bind="validationGroup">
         <validation-summary></validation-summary>
+    </section>
+
+    <h2>Automatic Validation</h2>
+    <section validation-group.bind="validationGroup">
+        <div>
+            <label>Some Number</label>
+            <input value.bind="model.someNumber & validate" />
+        </div>
+        <div>
+            <label>Some Text</label>
+            <input value.bind="model.someText & validate"/>
+        </div>
+        <!-- THESE BITS WONT WORK YET
+        <div>
+            <label>Some Nested Number</label>
+            <input value.bind="model.someNestedObject.someNumber & validate"/>
+        </div>
+        <div repeat.for="i of model.someArray.length">
+            <label>Some Array - Index ${i + 1}</label>
+            <input value.bind="model.someArray[i]  & validate"/>
+        </div>
+        -->
     </section>
 </template>

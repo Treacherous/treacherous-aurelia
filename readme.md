@@ -2,6 +2,9 @@
 
 Treacherous plugin for aurelia which allows treacherous validation to hook into the view.
 
+It is very much like the knockout one but tries to work similarly to aurelia's new validation system 
+wherever possible.
+
 (See more about Treacherous [HERE](https://github.com/grofit/treacherous))
 
 ## Installing
@@ -26,6 +29,12 @@ export function configure(aurelia) {
 Then you need to specify what you want to validate:
 
 ```html
+<input value.bind="someValue & validate"/>
+```
+
+or if you want to manually specify what you want to validate
+
+```html
 <input value.bind="someValue" validate-property="someValue"/>
 ```
 
@@ -38,9 +47,20 @@ or if you need to do anything complex go for:
 Here is an example of what it does and how to use it.
 [View Example](https://rawgithub.com/grofit/treacherous-aurelia/master/examples/index.html)
 
-## Available Attributes/Elements
+## Available Attributes/Elements/Binding Behaviours
 
 This adds a few custom attributes/elements for you to consume to allow your `validationGroup` instances to be used within the view.
+
+### `validate` binding behaviour
+
+This will attempt to automatically resolve the property you wish to bind to and will use the default  registered 
+validation strategy to process it. If it is something complex, like nested properties or arrays you may need
+to use one of the complex binding attributes.
+
+#### Usage
+```html
+<input value.bind="someValue & validate"/>
+```
 
 ### `validation-group` Attribute
 
@@ -117,4 +137,4 @@ such as automatic validation hooking on `value` and `textInput` bindings. So goi
 there should be some way to achieve the same thing within Aurelia but it is often difficult
 to get targetted information from the Aurelia team while they are moving towards a major RC.
 
-If you know better than I when it comes to Aurelia feel free to add helpers and improvements.
+* There has been a minor update to allow for basic auto binding via the `validate` binding behaviour

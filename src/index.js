@@ -2,8 +2,10 @@ import {ValidationStrategy} from "./strategy/validation-strategy";
 import {InlineStrategy} from "./strategy/inline-strategy";
 
 export {ValidationStrategy} from "./strategy/validation-strategy";
+export {ValidateBindingBehavior} from "./binding-behaviours/validate-binding-behaviour";
 
 export function configure(aurelia) {
+    aurelia.globalResources("./binding-behaviours/validate-binding-behaviour");
     aurelia.globalResources("./attributes/validation-group-attribute");
     aurelia.globalResources("./attributes/validation-options-attribute");
     aurelia.globalResources("./attributes/validate-property-attribute");
