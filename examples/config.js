@@ -2,6 +2,12 @@ System.config({
   baseURL: ".",
   defaultJSExtensions: true,
   transpiler: "babel",
+  babelOptions: {
+    "optional": [
+      "runtime",
+      "optimisation.modules.system"
+    ]
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -23,9 +29,7 @@ System.config({
     "core-js": "npm:core-js@2.0.3",
     "event-js": "npm:event-js@0.1.0",
     "property-resolver": "npm:property-resolver@0.0.6",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.93",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93",
-    "treacherous": "npm:treacherous@0.5.0",
+    "treacherous": "npm:treacherous@0.6.0",
     "treacherous-aurelia": "../dist/commonjs",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -34,7 +38,7 @@ System.config({
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.2"
+      "process": "npm:process@0.11.3"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
@@ -160,7 +164,7 @@ System.config({
     "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:bluebird@3.3.4": {
+    "npm:bluebird@3.3.5": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:core-js@2.0.3": {
@@ -175,14 +179,14 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:process@0.11.2": {
+    "npm:process@0.11.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
     "npm:property-resolver@0.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:treacherous@0.5.0": {
-      "bluebird": "npm:bluebird@3.3.4",
+    "npm:treacherous@0.6.0": {
+      "bluebird": "npm:bluebird@3.3.5",
       "event-js": "npm:event-js@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "property-resolver": "npm:property-resolver@0.0.6"
@@ -277,20 +281,20 @@ System.config({
       "npm:aurelia-templating@1.0.0-beta.1.2.1/aurelia-templating.js",
       "npm:babel-core@5.8.38.js",
       "npm:babel-core@5.8.38/browser.js",
-      "npm:bluebird@3.3.4.js",
-      "npm:bluebird@3.3.4/js/browser/bluebird.js",
+      "npm:bluebird@3.3.5.js",
+      "npm:bluebird@3.3.5/js/browser/bluebird.js",
       "npm:core-js@2.0.3.js",
       "npm:core-js@2.0.3/client/shim.min.js",
       "npm:event-js@0.1.0.js",
       "npm:event-js@0.1.0/dist/commonjs/event-handler.js",
       "npm:event-js@0.1.0/dist/commonjs/event-listener.js",
       "npm:event-js@0.1.0/dist/commonjs/index.js",
-      "npm:process@0.11.2.js",
-      "npm:process@0.11.2/browser.js",
+      "npm:process@0.11.3.js",
+      "npm:process@0.11.3/browser.js",
       "npm:property-resolver@0.0.6.js",
       "npm:property-resolver@0.0.6/dist/property-resolver.js",
-      "npm:treacherous@0.5.0.js",
-      "npm:treacherous@0.5.0/dist/treacherous.minimal.js"
+      "npm:treacherous@0.6.0.js",
+      "npm:treacherous@0.6.0/dist/treacherous.js"
     ]
   }
 });

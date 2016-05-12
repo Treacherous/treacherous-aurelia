@@ -5,7 +5,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.2.0",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.2.0",
@@ -18,9 +17,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "event-js": "npm:event-js@0.1.0",
     "property-resolver": "npm:property-resolver@0.0.6",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.93",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93",
-    "treacherous": "npm:treacherous@0.5.0",
+    "treacherous": "npm:treacherous@0.6.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -175,7 +172,7 @@ System.config({
     "npm:property-resolver@0.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:treacherous@0.5.0": {
+    "npm:treacherous@0.6.0": {
       "bluebird": "npm:bluebird@3.3.4",
       "event-js": "npm:event-js@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",

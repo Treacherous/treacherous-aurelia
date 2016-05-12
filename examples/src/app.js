@@ -1,4 +1,4 @@
-import {create as createValidationGroup, createRuleset} from "treacherous";
+import {createGroup, createRuleset} from "treacherous";
 
 class ExampleModel
 {
@@ -17,7 +17,7 @@ export class App
         this.model = new ExampleModel();
 
         var ruleset = this._generateRulesetForModel();
-        this.validationGroup = createValidationGroup(this.model, ruleset);
+        this.validationGroup = createGroup(this.model, ruleset);
     }
 
     _generateRulesetForModel() {
