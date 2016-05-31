@@ -130,6 +130,22 @@ import {YourStrategy} from "wherever";
 aurelia.container.registerInstance(ValidationStrategy, new YourStrategy());
 ```
 
+## Webpack Users!
+
+So if you are using webpack bundler for Aurelia you need to make sure in your webpack config file that 
+where you have the `new AureliaWebpackPlugin()` call you add this in as a sub module like so:
+
+```
+new AureliaWebpackPlugin({
+      includeSubModules: [
+        { moduleId: 'treacherous-aurelia' }
+      ]
+    }),
+```
+
+This will solve any of the `globalResources` calls which fail to resolve, same is needed for any other 
+aurelia plugins you want to consume in your webpack project.
+
 ## TODO
 
 So currently this is a bare bones implementation as the knockout version does a lot more for you,
