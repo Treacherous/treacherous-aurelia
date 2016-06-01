@@ -1,5 +1,7 @@
 # Treacherous-Aurelia
 
+[![Join the chat at https://gitter.im/grofit/treacherous](https://badges.gitter.im/grofit/treacherous.svg)](https://gitter.im/grofit/treacherous?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Treacherous plugin for aurelia which allows treacherous validation to hook into the view.
 
 It is very much like the knockout one but tries to work similarly to aurelia's new validation system 
