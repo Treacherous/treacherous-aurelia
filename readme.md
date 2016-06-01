@@ -15,7 +15,20 @@ Just do an `jspm install npm:treacherous-aurelia`
 
 ## How do I use it
 
-You need to add the plugin to aurelia in your setup, like so:
+Once you have installed it you should have access to the `treacherous-aurelia` module, and the `treacherous` 
+module (which is a dependency of `treacherous-aurelia`. You should use `treacherous` as normal to make 
+your groups and rulesets etc, like:
+
+```
+import {createGroup, createRuleset} from "treacherous";
+
+var model = ...;
+var ruleset = createRuleset()...build();
+var validationGroup = createGroup(model, ruleset);
+```
+
+The aurelia plugin here is purely just for letting aurelia know about the treacherous system so for aurelia
+to be aware of your validation groups etc you need to add the plugin to aurelia in your setup, like so:
 
 ```js
 export function configure(aurelia) {
@@ -44,7 +57,7 @@ or if you need to do anything complex go for:
 <input value.bind="someValue" validate-property.bind="'someArray[' + $index + ']'"/>
 ```
 
-Here is an example of what it does and how to use it.
+Here is an example of what it does and how to use it, feel free to look at the source in the examples folder.
 [View Example](https://rawgithub.com/grofit/treacherous-aurelia/master/examples/index.html)
 
 ## Available Attributes/Elements/Binding Behaviours
