@@ -11,4 +11,6 @@ export class ValidationGroupAttribute
     bind(binding, overrideContext) {
         overrideContext.validationGroup = this.value;
     }
+
+    
 }

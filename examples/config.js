@@ -22,7 +22,7 @@ System.config({
     "core-js": "npm:core-js@2.0.3",
     "event-js": "npm:event-js@0.1.0",
     "property-resolver": "npm:property-resolver@0.0.6",
-    "treacherous": "npm:treacherous@0.6.0",
+    "treacherous": "npm:treacherous@0.7.1",
     "treacherous-aurelia": "../dist/commonjs",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -192,7 +192,7 @@ System.config({
     "npm:property-resolver@0.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:treacherous@0.6.0": {
+    "npm:treacherous@0.7.1": {
       "bluebird": "npm:bluebird@3.4.0",
       "event-js": "npm:event-js@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
@@ -300,8 +300,8 @@ System.config({
       "npm:process@0.11.3/browser.js",
       "npm:property-resolver@0.0.6.js",
       "npm:property-resolver@0.0.6/dist/property-resolver.js",
-      "npm:treacherous@0.6.0.js",
-      "npm:treacherous@0.6.0/dist/treacherous.js"
+      "npm:treacherous@0.7.1.js",
+      "npm:treacherous@0.7.1/dist/treacherous.js"
     ]
   }
 });

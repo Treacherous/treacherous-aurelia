@@ -1,6 +1,6 @@
 {
   "name": "treacherous-aurelia",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "registry": "jspm",
   "description": "A plugin to allow aurelia to work with the treacherous validaiton system",
   "keywords": [
@@ -29,13 +29,15 @@
       "aurelia-templating": "npm:aurelia-templating@^1.0.0-beta.1.1.1",
       "event-js": "npm:event-js@^0.1.0",
       "property-resolver": "npm:property-resolver@^0.0.6",
-      "treacherous": "npm:treacherous@^0.6.0"
+      "treacherous": "npm:treacherous@^0.7.1"
     },
     "devDependencies": {
       "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1",
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^2.0.3"
+      "core-js": "npm:core-js@^2.0.3",
+      "traceur": "github:jmcriffey/bower-traceur@0.0.93",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93"
     }
   },
   "format": "register",
