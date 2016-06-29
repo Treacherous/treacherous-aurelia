@@ -19,7 +19,6 @@ var bundles = {
             "aurelia-history-browser",
             "babel",
             "core-js",
-            "bluebird",
             "event-js",
             "property-resolver",
             "treacherous"

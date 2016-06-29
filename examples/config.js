@@ -1,6 +1,12 @@
 System.config({
   defaultJSExtensions: true,
   transpiler: "babel",
+  babelOptions: {
+    "optional": [
+      "runtime",
+      "optimisation.modules.system"
+    ]
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -22,7 +28,7 @@ System.config({
     "core-js": "npm:core-js@2.0.3",
     "event-js": "npm:event-js@0.1.0",
     "property-resolver": "npm:property-resolver@0.0.6",
-    "treacherous": "npm:treacherous@0.7.1",
+    "treacherous": "npm:treacherous@0.8.0",
     "treacherous-aurelia": "../dist/commonjs",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -34,10 +40,13 @@ System.config({
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.3"
+      "process": "npm:process@0.11.5"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:jspm/nodelibs-vm@0.1.0": {
+      "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -163,9 +172,6 @@ System.config({
     "npm:babel-runtime@5.8.24": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:bluebird@3.4.0": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:buffer@3.6.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
@@ -186,14 +192,15 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:process@0.11.3": {
-      "assert": "github:jspm/nodelibs-assert@0.1.0"
+    "npm:process@0.11.5": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "vm": "github:jspm/nodelibs-vm@0.1.0"
     },
     "npm:property-resolver@0.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:treacherous@0.7.1": {
-      "bluebird": "npm:bluebird@3.4.0",
+    "npm:treacherous@0.8.0": {
       "event-js": "npm:event-js@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "property-resolver": "npm:property-resolver@0.0.6"
@@ -201,6 +208,9 @@ System.config({
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:vm-browserify@0.0.4": {
+      "indexof": "npm:indexof@0.0.1"
     }
   },
   bundles: {
@@ -288,20 +298,18 @@ System.config({
       "npm:aurelia-templating@1.0.0-beta.1.2.7/aurelia-templating.js",
       "npm:babel-core@5.8.24.js",
       "npm:babel-core@5.8.24/browser.js",
-      "npm:bluebird@3.4.0.js",
-      "npm:bluebird@3.4.0/js/browser/bluebird.js",
       "npm:core-js@2.0.3.js",
       "npm:core-js@2.0.3/client/shim.min.js",
       "npm:event-js@0.1.0.js",
       "npm:event-js@0.1.0/dist/commonjs/event-handler.js",
       "npm:event-js@0.1.0/dist/commonjs/event-listener.js",
       "npm:event-js@0.1.0/dist/commonjs/index.js",
-      "npm:process@0.11.3.js",
-      "npm:process@0.11.3/browser.js",
+      "npm:process@0.11.5.js",
+      "npm:process@0.11.5/browser.js",
       "npm:property-resolver@0.0.6.js",
       "npm:property-resolver@0.0.6/dist/property-resolver.js",
-      "npm:treacherous@0.7.1.js",
-      "npm:treacherous@0.7.1/dist/treacherous.js"
+      "npm:treacherous@0.8.0.js",
+      "npm:treacherous@0.8.0/dist/treacherous.js"
     ]
   }
 });
