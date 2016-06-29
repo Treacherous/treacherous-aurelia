@@ -15,7 +15,7 @@ System.config({
     "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.2.7",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
-    "core-js": "npm:core-js@2.4.0",
+    "core-js": "npm:core-js@2.0.3",
     "event-js": "npm:event-js@0.1.0",
     "property-resolver": "npm:property-resolver@0.0.6",
     "traceur": "github:jmcriffey/bower-traceur@0.0.93",
@@ -171,7 +171,7 @@ System.config({
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:core-js@2.4.0": {
+    "npm:core-js@2.0.3": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
