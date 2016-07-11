@@ -11,7 +11,7 @@
     "promise"
   ],
   "license": "MIT",
-  "main": "dist/commonjs/index.js",
+  "main": "dist/commonjs/treacherous-aurelia.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/grofit/treacherous-aurelia"
@@ -51,7 +51,6 @@
     "aurelia-framework": "1.0.0-rc.1.0.1"
   },
   "devDependencies": {
-    "aurelia-bundler": "^0.4.0",
     "aurelia-tools": "^0.2.3",
     "babel-dts-generator": "^0.6.1",
     "babel-eslint": "^6.1.2",
@@ -101,9 +100,45 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "through2": "^2.0.1",
+    "typedoc": "^0.4.4",
     "typescript": "^1.9.0-dev.20160622-1.0",
     "vinyl": "^1.1.1",
     "vinyl-paths": "^2.1.0",
     "yargs": "^4.8.0"
+  },
+  "aurelia": {
+    "usedBy": [],
+    "documentation": {
+      "links": [
+        {
+          "rel": "license",
+          "mediaType": "text/plain",
+          "title": "The MIT License (MIT)",
+          "href": "LICENSE"
+        },
+        {
+          "rel": "describedby",
+          "mediaType": "application/aurelia-doc+json",
+          "title": "API",
+          "href": "doc/api.json"
+        },
+        {
+          "rel": "version-history",
+          "mediaType": "text/markdown",
+          "title": "Change Log",
+          "href": "doc/CHANGELOG.md"
+        }
+      ]
+    },
+    "build": {
+      "resources": [
+        "treacherous-aurelia/binding-behaviours/validate-binding-behaviour",
+        "treacherous-aurelia/attributes/validation-group-attribute",
+        "treacherous-aurelia/attributes/validation-options-attribute",
+        "treacherous-aurelia/attributes/validate-property-attribute",
+        "treacherous-aurelia/elements/validation-summary-element",
+        "treacherous-aurelia/elements/validation-summary.html"
+      ]
+    }
   }
 }

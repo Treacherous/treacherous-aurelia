@@ -12,22 +12,22 @@ gulp.task('changelog', function () {
   }).pipe(conventionalChangelog({
     preset: 'angular'
   }))
-      .pipe(gulp.dest(paths.doc));
+  .pipe(gulp.dest(paths.doc));
 });
 
 gulp.task('bump-version', function(){
   return gulp.src(['./package.json', './bower.json'])
-      .pipe(bump({type:args.bump })) //major|minor|patch|prerelease
-      .pipe(gulp.dest('./'));
+    .pipe(bump({type:args.bump })) //major|minor|patch|prerelease
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('prepare-release', function(callback){
   return runSequence(
-      'build',
-      'lint',
-      'bump-version',
-      'doc',
-      'changelog',
-      callback
+    'build',
+    'lint',
+    'bump-version',
+    'doc',
+    'changelog',
+    callback
   );
 });

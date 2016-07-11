@@ -20,14 +20,14 @@ exports.base = function() {
   };
   if (!paths.useTypeScriptForDTS) {
     config.plugins.push(
-        ['babel-dts-generator', {
+      ['babel-dts-generator', {
           packageName: paths.packageName,
           typings: '',
           suppressModulePath: true,
           suppressComments: false,
           memberOutputFilter: /^_.*/,
           suppressAmbientDeclaration: true
-        }]
+      }]
     );
   };
   config.plugins.push('transform-flow-strip-types');

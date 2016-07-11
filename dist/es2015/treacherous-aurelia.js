@@ -1,4 +1,3 @@
-
 import { ValidationStrategy } from "./strategy/validation-strategy";
 
 export * from "./strategy/validation-strategy";

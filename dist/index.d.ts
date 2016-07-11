@@ -1,1 +1,0 @@
-export * from 'treacherous-aurelia/treacherous-aurelia';
