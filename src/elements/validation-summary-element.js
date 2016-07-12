@@ -3,11 +3,7 @@ import {customElement, inlineView} from 'aurelia-templating';
 
 @customElement("validation-summary")
 @inject(Element)
-@inlineView(`
-<template>
-    <p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p>
-</template>
-`)
+@inlineView('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>')
 export class ValidationSummary {
 
     @bindable validationGroup;
