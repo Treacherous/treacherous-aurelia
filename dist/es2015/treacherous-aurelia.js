@@ -4,12 +4,6 @@ import { InlineStrategy } from "./strategy/inline-strategy";
 export * from "./strategy/validation-strategy";
 export * from "./strategy/inline-strategy";
 export * from "./binding-behaviours/validate-binding-behaviour";
-export * from "./attributes/validate-property-attribute";
-export * from "./attributes/validation-group-attribute";
-export * from "./attributes/validation-options-attribute";
-export * from "./binding-behaviours/validate-binding-behaviour";
-export * from "./elements/validation-summary-element";
-export * from "./elements/validation-summary-element";
 
 export function configure(aurelia) {
     aurelia.globalResources("./binding-behaviours/validate-binding-behaviour");

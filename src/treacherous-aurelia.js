@@ -3,6 +3,7 @@ import {InlineStrategy} from "./strategy/inline-strategy";
 
 export * from "./strategy/validation-strategy";
 export * from "./strategy/inline-strategy";
+export * from "./binding-behaviours/validate-binding-behaviour";
 
 export function configure(aurelia) {
     aurelia.globalResources("./binding-behaviours/validate-binding-behaviour");
