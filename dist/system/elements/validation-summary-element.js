@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["aurelia-framework", "aurelia-templating"], function (_export, _context) {
+System.register(["aurelia-framework"], function (_export, _context) {
     "use strict";
 
-    var inject, bindable, Element, customElement, inlineView, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, ValidationSummary;
+    var customElement, inlineView, inject, bindable, Element, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, ValidationSummary;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -52,12 +52,11 @@ System.register(["aurelia-framework", "aurelia-templating"], function (_export, 
 
     return {
         setters: [function (_aureliaFramework) {
+            customElement = _aureliaFramework.customElement;
+            inlineView = _aureliaFramework.inlineView;
             inject = _aureliaFramework.inject;
             bindable = _aureliaFramework.bindable;
             Element = _aureliaFramework.Element;
-        }, function (_aureliaTemplating) {
-            customElement = _aureliaTemplating.customElement;
-            inlineView = _aureliaTemplating.inlineView;
         }],
         execute: function () {
             _export("ValidationSummary", ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
