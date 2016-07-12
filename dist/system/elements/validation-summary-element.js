@@ -60,7 +60,7 @@ System.register(["aurelia-framework", "aurelia-templating"], function (_export, 
             inlineView = _aureliaTemplating.inlineView;
         }],
         execute: function () {
-            _export("ValidationSummary", ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView("\n<template>\n    <p class=\"validation-summary-entry\" repeat.for=\"error of propertyErrors\">" + error.property + " - " + error.error + "</p>\n</template>\n"), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+            _export("ValidationSummary", ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
                 function ValidationSummary(element) {
                     
 

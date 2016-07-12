@@ -53,7 +53,7 @@ define(["exports", "aurelia-framework", "aurelia-templating"], function (exports
 
     var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
 
-    var ValidationSummary = exports.ValidationSummary = (_dec = (0, _aureliaTemplating.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.inject)(_aureliaFramework.Element), _dec3 = (0, _aureliaTemplating.inlineView)("\n<template>\n    <p class=\"validation-summary-entry\" repeat.for=\"error of propertyErrors\">" + error.property + " - " + error.error + "</p>\n</template>\n"), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+    var ValidationSummary = exports.ValidationSummary = (_dec = (0, _aureliaTemplating.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.inject)(_aureliaFramework.Element), _dec3 = (0, _aureliaTemplating.inlineView)('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function ValidationSummary(element) {
             
 

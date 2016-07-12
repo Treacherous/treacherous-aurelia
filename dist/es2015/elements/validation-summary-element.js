@@ -46,11 +46,7 @@ function _initializerWarningHelper(descriptor, context) {
 import { inject, bindable, Element } from "aurelia-framework";
 import { customElement, inlineView } from 'aurelia-templating';
 
-export let ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView(`
-<template>
-    <p class="validation-summary-entry" repeat.for="error of propertyErrors">${ error.property } - ${ error.error }</p>
-</template>
-`), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = class ValidationSummary {
+export let ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = class ValidationSummary {
 
     constructor(element) {
         _initDefineProp(this, "validationGroup", _descriptor, this);
