@@ -136,8 +136,7 @@
         "treacherous-aurelia/attributes/validation-group-attribute",
         "treacherous-aurelia/attributes/validation-options-attribute",
         "treacherous-aurelia/attributes/validate-property-attribute",
-        "treacherous-aurelia/elements/validation-summary-element",
-        "treacherous-aurelia/elements/validation-summary-element.html"
+        "treacherous-aurelia/elements/validation-summary-element"
       ]
     }
   }
