@@ -3,9 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.GenerateElement = undefined;
+exports.ValidationSummaryCustomElement = undefined;
 
-var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
+var _dec, _dec2, _class, _desc, _value, _class2, _descriptor;
 
 var _aureliaFramework = require("aurelia-framework");
 
@@ -54,8 +54,8 @@ function _initializerWarningHelper(descriptor, context) {
     throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var GenerateElement = exports.GenerateElement = (_dec = (0, _aureliaFramework.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.useView)("./validation-summary.html"), _dec3 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
-    function GenerateElement(element) {
+var ValidationSummaryCustomElement = exports.ValidationSummaryCustomElement = (_dec = (0, _aureliaFramework.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = (_class2 = function () {
+    function ValidationSummaryCustomElement(element) {
         
 
         _initDefineProp(this, "validationGroup", _descriptor, this);
@@ -64,7 +64,7 @@ var GenerateElement = exports.GenerateElement = (_dec = (0, _aureliaFramework.cu
         this.propertyErrors = [];
     }
 
-    GenerateElement.prototype.bind = function bind(binding, scope) {
+    ValidationSummaryCustomElement.prototype.bind = function bind(binding, scope) {
         var _this = this;
 
         var validationGroup = this.validationGroup || scope.validationGroup;
@@ -86,14 +86,14 @@ var GenerateElement = exports.GenerateElement = (_dec = (0, _aureliaFramework.cu
         refreshErrorSummary();
     };
 
-    GenerateElement.prototype.detached = function detached() {
+    ValidationSummaryCustomElement.prototype.detached = function detached() {
         if (this._activeSubscription) {
             this._activeSubscription();
         }
     };
 
-    return GenerateElement;
+    return ValidationSummaryCustomElement;
 }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "validationGroup", [_aureliaFramework.bindable], {
     enumerable: true,
     initializer: null
-})), _class2)) || _class) || _class) || _class);
+})), _class2)) || _class) || _class);

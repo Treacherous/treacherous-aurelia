@@ -1,9 +1,8 @@
 import {inject, customElement, useView, bindable} from 'aurelia-framework';
 
 @customElement("validation-summary")
-@useView("./validation-summary.html")
 @inject(Element)
-export class GenerateElement {
+export class ValidationSummaryCustomElement {
 
     @bindable validationGroup;
 

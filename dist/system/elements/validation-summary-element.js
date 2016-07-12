@@ -3,7 +3,7 @@
 System.register(["aurelia-framework"], function (_export, _context) {
     "use strict";
 
-    var inject, customElement, useView, bindable, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, GenerateElement;
+    var inject, customElement, useView, bindable, _dec, _dec2, _class, _desc, _value, _class2, _descriptor, ValidationSummaryCustomElement;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -58,8 +58,8 @@ System.register(["aurelia-framework"], function (_export, _context) {
             bindable = _aureliaFramework.bindable;
         }],
         execute: function () {
-            _export("GenerateElement", GenerateElement = (_dec = customElement("validation-summary"), _dec2 = useView("./validation-summary.html"), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
-                function GenerateElement(element) {
+            _export("ValidationSummaryCustomElement", ValidationSummaryCustomElement = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec(_class = _dec2(_class = (_class2 = function () {
+                function ValidationSummaryCustomElement(element) {
                     
 
                     _initDefineProp(this, "validationGroup", _descriptor, this);
@@ -68,7 +68,7 @@ System.register(["aurelia-framework"], function (_export, _context) {
                     this.propertyErrors = [];
                 }
 
-                GenerateElement.prototype.bind = function bind(binding, scope) {
+                ValidationSummaryCustomElement.prototype.bind = function bind(binding, scope) {
                     var _this = this;
 
                     var validationGroup = this.validationGroup || scope.validationGroup;
@@ -90,19 +90,19 @@ System.register(["aurelia-framework"], function (_export, _context) {
                     refreshErrorSummary();
                 };
 
-                GenerateElement.prototype.detached = function detached() {
+                ValidationSummaryCustomElement.prototype.detached = function detached() {
                     if (this._activeSubscription) {
                         this._activeSubscription();
                     }
                 };
 
-                return GenerateElement;
+                return ValidationSummaryCustomElement;
             }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "validationGroup", [bindable], {
                 enumerable: true,
                 initializer: null
-            })), _class2)) || _class) || _class) || _class));
+            })), _class2)) || _class) || _class));
 
-            _export("GenerateElement", GenerateElement);
+            _export("ValidationSummaryCustomElement", ValidationSummaryCustomElement);
         }
     };
 });
