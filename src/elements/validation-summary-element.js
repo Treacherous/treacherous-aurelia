@@ -1,4 +1,5 @@
-import {inlineView, inject, customElement, bindable} from "aurelia-framework";
+import {inject, bindable, Element} from "aurelia-framework";
+import {customElement, inlineView} from 'aurelia-templating';
 
 @customElement("validation-summary")
 @inject(Element)

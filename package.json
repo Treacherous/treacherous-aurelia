@@ -48,7 +48,8 @@
   },
   "dependencies": {
     "treacherous": "^0.9.0",
-    "aurelia-framework": "1.0.0-rc.1.0.1"
+    "aurelia-framework": "1.0.0-rc.1.0.1",
+    "aurelia-templating": "latest"
   },
   "devDependencies": {
     "aurelia-tools": "^0.2.3",

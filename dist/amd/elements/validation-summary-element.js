@@ -1,10 +1,10 @@
-define(["exports", "aurelia-framework"], function (exports, _aureliaFramework) {
+define(["exports", "aurelia-framework", "aurelia-templating"], function (exports, _aureliaFramework, _aureliaTemplating) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.ValidationSummaryCustomElement = undefined;
+    exports.ValidationSummary = undefined;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -51,10 +51,10 @@ define(["exports", "aurelia-framework"], function (exports, _aureliaFramework) {
         throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
     }
 
-    var _dec, _dec2, _class, _desc, _value, _class2, _descriptor;
+    var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
 
-    var ValidationSummaryCustomElement = exports.ValidationSummaryCustomElement = (_dec = (0, _aureliaFramework.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = (_class2 = function () {
-        function ValidationSummaryCustomElement(element) {
+    var ValidationSummary = exports.ValidationSummary = (_dec = (0, _aureliaTemplating.customElement)("validation-summary"), _dec2 = (0, _aureliaFramework.inject)(_aureliaFramework.Element), _dec3 = (0, _aureliaTemplating.inlineView)("\n<template>\n    <p class=\"validation-summary-entry\" repeat.for=\"error of propertyErrors\">" + error.property + " - " + error.error + "</p>\n</template>\n"), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+        function ValidationSummary(element) {
             
 
             _initDefineProp(this, "validationGroup", _descriptor, this);
@@ -63,7 +63,7 @@ define(["exports", "aurelia-framework"], function (exports, _aureliaFramework) {
             this.propertyErrors = [];
         }
 
-        ValidationSummaryCustomElement.prototype.bind = function bind(binding, scope) {
+        ValidationSummary.prototype.bind = function bind(binding, scope) {
             var _this = this;
 
             var validationGroup = this.validationGroup || scope.validationGroup;
@@ -85,15 +85,15 @@ define(["exports", "aurelia-framework"], function (exports, _aureliaFramework) {
             refreshErrorSummary();
         };
 
-        ValidationSummaryCustomElement.prototype.detached = function detached() {
+        ValidationSummary.prototype.detached = function detached() {
             if (this._activeSubscription) {
                 this._activeSubscription();
             }
         };
 
-        return ValidationSummaryCustomElement;
+        return ValidationSummary;
     }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "validationGroup", [_aureliaFramework.bindable], {
         enumerable: true,
         initializer: null
-    })), _class2)) || _class) || _class);
+    })), _class2)) || _class) || _class) || _class);
 });

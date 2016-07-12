@@ -1,9 +1,9 @@
 "use strict";
 
-System.register(["aurelia-framework"], function (_export, _context) {
+System.register(["aurelia-framework", "aurelia-templating"], function (_export, _context) {
     "use strict";
 
-    var inject, customElement, useView, bindable, _dec, _dec2, _class, _desc, _value, _class2, _descriptor, ValidationSummaryCustomElement;
+    var inject, bindable, Element, customElement, inlineView, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, ValidationSummary;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -53,13 +53,15 @@ System.register(["aurelia-framework"], function (_export, _context) {
     return {
         setters: [function (_aureliaFramework) {
             inject = _aureliaFramework.inject;
-            customElement = _aureliaFramework.customElement;
-            useView = _aureliaFramework.useView;
             bindable = _aureliaFramework.bindable;
+            Element = _aureliaFramework.Element;
+        }, function (_aureliaTemplating) {
+            customElement = _aureliaTemplating.customElement;
+            inlineView = _aureliaTemplating.inlineView;
         }],
         execute: function () {
-            _export("ValidationSummaryCustomElement", ValidationSummaryCustomElement = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec(_class = _dec2(_class = (_class2 = function () {
-                function ValidationSummaryCustomElement(element) {
+            _export("ValidationSummary", ValidationSummary = (_dec = customElement("validation-summary"), _dec2 = inject(Element), _dec3 = inlineView("\n<template>\n    <p class=\"validation-summary-entry\" repeat.for=\"error of propertyErrors\">" + error.property + " - " + error.error + "</p>\n</template>\n"), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+                function ValidationSummary(element) {
                     
 
                     _initDefineProp(this, "validationGroup", _descriptor, this);
@@ -68,7 +70,7 @@ System.register(["aurelia-framework"], function (_export, _context) {
                     this.propertyErrors = [];
                 }
 
-                ValidationSummaryCustomElement.prototype.bind = function bind(binding, scope) {
+                ValidationSummary.prototype.bind = function bind(binding, scope) {
                     var _this = this;
 
                     var validationGroup = this.validationGroup || scope.validationGroup;
@@ -90,19 +92,19 @@ System.register(["aurelia-framework"], function (_export, _context) {
                     refreshErrorSummary();
                 };
 
-                ValidationSummaryCustomElement.prototype.detached = function detached() {
+                ValidationSummary.prototype.detached = function detached() {
                     if (this._activeSubscription) {
                         this._activeSubscription();
                     }
                 };
 
-                return ValidationSummaryCustomElement;
+                return ValidationSummary;
             }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "validationGroup", [bindable], {
                 enumerable: true,
                 initializer: null
-            })), _class2)) || _class) || _class));
+            })), _class2)) || _class) || _class) || _class));
 
-            _export("ValidationSummaryCustomElement", ValidationSummaryCustomElement);
+            _export("ValidationSummary", ValidationSummary);
         }
     };
 });
