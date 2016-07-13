@@ -1,14 +1,12 @@
-import {customElement, inlineView, inject, bindable, Element} from "aurelia-framework";
+import {customElement, inlineView, inject, bindable} from "aurelia-framework";
 
 @customElement("validation-summary")
-@inject(Element)
-@inlineView('<template><p class="validation-summary-entry" repeat.for="error of propertyErrors">${error.property} - ${error.error}</p></template>')
+@inlineView('<template><ul class="validation-summary" show.bind="propertyErrors.length"><li repeat.for="error of propertyErrors">${error.property} - ${error.error}</li></ul></template>')
 export class ValidationSummary {
 
     @bindable validationGroup;
 
-    constructor(element) {
-        this.element = element;
+    constructor() {
         this.propertyErrors = [];
     }
 
