@@ -4,6 +4,18 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _classHelper = require("./helper/class-helper");
+
+Object.keys(_classHelper).forEach(function (key) {
+    if (key === "default") return;
+    Object.defineProperty(exports, key, {
+        enumerable: true,
+        get: function get() {
+            return _classHelper[key];
+        }
+    });
+});
+
 var _validationStrategy = require("./strategy/validation-strategy");
 
 Object.keys(_validationStrategy).forEach(function (key) {

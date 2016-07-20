@@ -1,6 +1,7 @@
 import {ValidationStrategy} from "./strategy/validation-strategy";
 import {InlineStrategy} from "./strategy/inline-strategy";
 
+export * from "./helper/class-helper";
 export * from "./strategy/validation-strategy";
 export * from "./strategy/inline-strategy";
 export * from "./binding-behaviours/validate-binding-behaviour";

@@ -1,8 +1,17 @@
-define(["exports", "./strategy/validation-strategy", "./strategy/inline-strategy", "./binding-behaviours/validate-binding-behaviour"], function (exports, _validationStrategy, _inlineStrategy, _validateBindingBehaviour) {
+define(["exports", "./helper/class-helper", "./strategy/validation-strategy", "./strategy/inline-strategy", "./binding-behaviours/validate-binding-behaviour"], function (exports, _classHelper, _validationStrategy, _inlineStrategy, _validateBindingBehaviour) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
+    });
+    Object.keys(_classHelper).forEach(function (key) {
+        if (key === "default") return;
+        Object.defineProperty(exports, key, {
+            enumerable: true,
+            get: function () {
+                return _classHelper[key];
+            }
+        });
     });
     Object.keys(_validationStrategy).forEach(function (key) {
         if (key === "default") return;
