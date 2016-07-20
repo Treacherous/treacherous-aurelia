@@ -1,6 +1,6 @@
 {
   "name": "treacherous-aurelia",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "registry": "jspm",
   "description": "A plugin to allow aurelia to work with the treacherous validaiton system",
   "keywords": [
@@ -12,6 +12,7 @@
   ],
   "license": "MIT",
   "main": "dist/commonjs/treacherous-aurelia.js",
+  "typings": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "http://github.com/grofit/treacherous-aurelia"
