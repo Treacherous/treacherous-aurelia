@@ -1,6 +1,6 @@
 {
   "name": "treacherous-aurelia",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "registry": "jspm",
   "description": "A plugin to allow aurelia to work with the treacherous validaiton system",
   "keywords": [
@@ -20,36 +20,27 @@
   "jspmNodeConversion": false,
   "jspm": {
     "registry": "npm",
-    "jspmPackage": true,
     "main": "treacherous-aurelia",
     "format": "amd",
     "directories": {
       "dist": "dist/amd"
     },
-    "peerDependencies": {
-      "aurelia-framework": "npm:aurelia-framework@^1.0.0-rc.1.0.1",
-      "event-js": "npm:event-js@^0.1.0",
-      "property-resolver": "npm:property-resolver@^0.0.6",
-      "treacherous": "npm:treacherous@^0.9.0"
-    },
     "dependencies": {
-      "aurelia-framework": "npm:aurelia-framework@^1.0.0-rc.1.0.1",
-      "event-js": "npm:event-js@^0.1.0",
-      "property-resolver": "npm:property-resolver@^0.0.6",
-      "treacherous": "npm:treacherous@^0.9.0"
+      "aurelia-framework": "^1.0.1",
+      "event-js": "^0.1.1",
+      "property-resolver": "^0.0.9",
+      "treacherous": "^0.11.0"
     },
     "devDependencies": {
-      "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1",
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@2.0.3",
-      "traceur": "github:jmcriffey/bower-traceur@0.0.93",
-      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93"
+      "aurelia-pal-browser": "^1.0.0",
+      "babel": "babel-core@^5.8.24",
+      "babel-runtime": "^5.8.24",
+      "core-js": "2.0.3"
     }
   },
   "dependencies": {
-    "treacherous": "^0.9.0",
-    "aurelia-framework": "^1.0.0-rc.1.0.2"
+    "treacherous": "^0.11.0",
+    "aurelia-framework": "^1.0.1"
   },
   "devDependencies": {
     "aurelia-bundler": "^0.4.0",
@@ -103,7 +94,7 @@
     "run-sequence": "^1.2.2",
     "through2": "^2.0.1",
     "typedoc": "^0.4.4",
-    "typescript": "^1.9.0-dev.20160622-1.0",
+    "typescript": "^2.0.0",
     "vinyl": "^1.1.1",
     "vinyl-paths": "^2.1.0",
     "yargs": "^4.8.0"
