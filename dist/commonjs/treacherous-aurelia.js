@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 var _classHelper = require("./helper/class-helper");
 
 Object.keys(_classHelper).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
         enumerable: true,
         get: function get() {
@@ -19,7 +19,7 @@ Object.keys(_classHelper).forEach(function (key) {
 var _validationStrategy = require("./strategy/validation-strategy");
 
 Object.keys(_validationStrategy).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
         enumerable: true,
         get: function get() {
@@ -31,7 +31,7 @@ Object.keys(_validationStrategy).forEach(function (key) {
 var _inlineStrategy = require("./strategy/inline-strategy");
 
 Object.keys(_inlineStrategy).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
         enumerable: true,
         get: function get() {
@@ -43,7 +43,7 @@ Object.keys(_inlineStrategy).forEach(function (key) {
 var _validateBindingBehaviour = require("./binding-behaviours/validate-binding-behaviour");
 
 Object.keys(_validateBindingBehaviour).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
         enumerable: true,
         get: function get() {

@@ -13,48 +13,51 @@ export var ValidateBindingBehavior = (_dec = inject(ValidationStrategy), _dec2 =
     }
 
     ValidateBindingBehavior.prototype.bind = function bind(binding, overrideContext) {
-        var _this = this;
+        this.element = binding.target;
+        this.propertyName = this.getTargetProperty(binding);
+        this.bindingContext = overrideContext;
+    };
 
-        var element = binding.target;
-        var propertyName = this.getTargetProperty(binding);
+    ValidateBindingBehavior.prototype.attached = function attached() {
+        var _this = this;
 
         var _validationStateHandler = function _validationStateHandler(args) {
             if (args.isValid) {
-                _this.validationStrategy.actionValidProperty(element, propertyName);
+                _this.validationStrategy.actionValidProperty(_this.element, _this.propertyName);
             } else {
-                _this.validationStrategy.actionInvalidProperty(element, propertyName, args.error);
+                _this.validationStrategy.actionInvalidProperty(_this.element, _this.propertyName, args.error);
             }
         };
 
         var _validationPredicate = function _validationPredicate(x) {
-            console.log("pred", x.property, propertyName);return x.property == propertyName;
+            return x.property == _this.propertyName;
         };
 
         var _setupValidation = function _setupValidation() {
             return _this.validationGroup.propertyStateChangedEvent.subscribe(_validationStateHandler, _validationPredicate);
         };
 
-        if (this._isWithinChildBinding(overrideContext)) {
-            overrideContext = overrideContext.parentOverrideContext;
+        if (this._isWithinChildBinding(this.bindingContext)) {
+            this.bindingContext = this.bindingContext.parentOverrideContext;
         }
 
-        this.validationGroup = overrideContext.bindingContext.validationGroup;
-        this.validationOptions = overrideContext.bindingContext.validationOptions || {};
+        this.validationGroup = this.bindingContext.validationGroup;
+        this.validationOptions = this.bindingContext.validationOptions || {};
 
         if (this.validationGroup) {
-            binding.activeSubscription = _setupValidation();
-            this.validationGroup.getPropertyError(propertyName).then(function (error) {
+            this.bindingContext.activeSubscription = _setupValidation();
+            this.validationGroup.getPropertyError(this.propertyName).then(function (error) {
                 if (error) {
-                    _this.validationStrategy.actionInvalidProperty(element, propertyName, error);
+                    _this.validationStrategy.actionInvalidProperty(_this.element, _this.propertyName, error);
                 }
             });
         }
     };
 
     ValidateBindingBehavior.prototype.unbind = function unbind(binding, overrideContext) {
-        if (binding.activeSubscription) {
-            binding.activeSubscription();
-            binding.activeSubscription = null;
+        if (overrideContext.activeSubscription) {
+            overrideContext.activeSubscription();
+            overrideContext.activeSubscription = null;
         }
     };
 

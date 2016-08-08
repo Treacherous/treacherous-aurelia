@@ -5,7 +5,7 @@ define(["exports", "./helper/class-helper", "./strategy/validation-strategy", ".
         value: true
     });
     Object.keys(_classHelper).forEach(function (key) {
-        if (key === "default") return;
+        if (key === "default" || key === "__esModule") return;
         Object.defineProperty(exports, key, {
             enumerable: true,
             get: function () {
@@ -14,7 +14,7 @@ define(["exports", "./helper/class-helper", "./strategy/validation-strategy", ".
         });
     });
     Object.keys(_validationStrategy).forEach(function (key) {
-        if (key === "default") return;
+        if (key === "default" || key === "__esModule") return;
         Object.defineProperty(exports, key, {
             enumerable: true,
             get: function () {
@@ -23,7 +23,7 @@ define(["exports", "./helper/class-helper", "./strategy/validation-strategy", ".
         });
     });
     Object.keys(_inlineStrategy).forEach(function (key) {
-        if (key === "default") return;
+        if (key === "default" || key === "__esModule") return;
         Object.defineProperty(exports, key, {
             enumerable: true,
             get: function () {
@@ -32,7 +32,7 @@ define(["exports", "./helper/class-helper", "./strategy/validation-strategy", ".
         });
     });
     Object.keys(_validateBindingBehaviour).forEach(function (key) {
-        if (key === "default") return;
+        if (key === "default" || key === "__esModule") return;
         Object.defineProperty(exports, key, {
             enumerable: true,
             get: function () {

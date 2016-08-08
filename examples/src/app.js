@@ -17,7 +17,10 @@ export class App
         this.model = new ExampleModel();
 
         var ruleset = this._generateRulesetForModel();
-        this.validationGroup = createGroup(this.model, ruleset);
+        this.validationGroup = createGroup()
+            .asReactiveGroup()
+            .andValidateOnStart()
+            .build(this.model, ruleset);
     }
 
     _generateRulesetForModel() {

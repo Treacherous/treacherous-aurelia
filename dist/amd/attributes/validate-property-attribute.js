@@ -41,14 +41,18 @@ define(["exports", "aurelia-framework", "../strategy/validation-strategy"], func
         };
 
         ValidateProperty.prototype.bind = function bind(binding, overrideContext) {
+            this.bindingContext = overrideContext;
+        };
+
+        ValidateProperty.prototype.attached = function attached() {
             var _this2 = this;
 
-            if (this._isWithinChildBinding(overrideContext)) {
-                overrideContext = overrideContext.parentOverrideContext;
+            if (this._isWithinChildBinding(this.bindingContext)) {
+                this.bindingContext = this.bindingContext.parentOverrideContext;
             }
 
-            this.validationGroup = overrideContext.validationGroup;
-            this.validationOptions = overrideContext.validationOptions || {};
+            this.validationGroup = this.bindingContext.validationGroup;
+            this.validationOptions = this.bindingContext.validationOptions || {};
 
             if (this.validationGroup) {
                 this.setupValidation();

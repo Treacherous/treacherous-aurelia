@@ -8,7 +8,7 @@
       "aurelia-framework": "npm:aurelia-framework@^1.0.1",
       "event-js": "npm:event-js@^0.1.1",
       "property-resolver": "npm:property-resolver@^0.0.9",
-      "treacherous": "npm:treacherous@^0.11.0"
+      "treacherous": "npm:treacherous@^0.12.0"
     },
     "devDependencies": {
       "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0",

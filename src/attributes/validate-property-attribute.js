@@ -15,12 +15,16 @@ export class ValidateProperty {
     }
 
     bind(binding, overrideContext) {
-        if (this._isWithinChildBinding(overrideContext)) {
-            overrideContext = overrideContext.parentOverrideContext;
+        this.bindingContext = overrideContext;
+    }
+
+    attached() {
+        if (this._isWithinChildBinding(this.bindingContext)) {
+            this.bindingContext = this.bindingContext.parentOverrideContext;
         }
 
-        this.validationGroup = overrideContext.validationGroup;
-        this.validationOptions = overrideContext.validationOptions || {};
+        this.validationGroup = this.bindingContext.validationGroup;
+        this.validationOptions = this.bindingContext.validationOptions || {};
 
         if(this.validationGroup) {
             this.setupValidation();
