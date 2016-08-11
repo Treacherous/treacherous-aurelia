@@ -152,10 +152,20 @@ where you have the `new AureliaWebpackPlugin()` call you add this in as a sub mo
 
 ```
 new AureliaWebpackPlugin({
-      includeSubModules: [
-        { moduleId: 'treacherous-aurelia' }
-      ]
-    }),
+    nameExternalModules: false
+}),
+```
+
+And your package.json like this:
+
+```
+"aurelia": {
+    "build": {
+        "resources": [
+            "treacherous-aurelia"
+        ]
+    }
+},
 ```
 
 This will solve any of the `globalResources` calls which fail to resolve, same is needed for any other 
