@@ -1,6 +1,6 @@
 {
   "name": "treacherous-aurelia",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "registry": "jspm",
   "description": "A plugin to allow aurelia to work with the treacherous validaiton system",
   "keywords": [
