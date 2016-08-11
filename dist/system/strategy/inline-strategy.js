@@ -68,7 +68,7 @@ System.register(["./validation-strategy", "../helper/class-helper"], function (_
                         var errorElement = document.getElementById(errorContainerName);
 
                         if (errorElement) {
-                            errorElement.remove();
+                            errorElement.parentElement.removeChild(errorElement);
                         }
                     }, _this._addElementError = function (message, element) {
                         var errorContainerName = this._getElementValidatorId(element);

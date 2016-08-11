@@ -45,7 +45,7 @@ var InlineStrategy = exports.InlineStrategy = function (_ValidationStrategy) {
             var errorElement = document.getElementById(errorContainerName);
 
             if (errorElement) {
-                errorElement.remove();
+                errorElement.parentElement.removeChild(errorElement);
             }
         }, _this._addElementError = function (message, element) {
             var errorContainerName = this._getElementValidatorId(element);

@@ -28,7 +28,9 @@ export class InlineStrategy extends ValidationStrategy
         var errorContainerName = this._getElementValidatorId(element);
         var errorElement = document.getElementById(errorContainerName);
 
-        if(errorElement) { errorElement.remove(); }
+        if(errorElement) {
+            errorElement.parentElement.removeChild(errorElement);
+        }
     };
 
     _addElementError = function(message, element)

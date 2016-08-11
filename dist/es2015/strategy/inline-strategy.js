@@ -23,7 +23,7 @@ export let InlineStrategy = class InlineStrategy extends ValidationStrategy {
             var errorElement = document.getElementById(errorContainerName);
 
             if (errorElement) {
-                errorElement.remove();
+                errorElement.parentElement.removeChild(errorElement);
             }
         }, this._addElementError = function (message, element) {
             var errorContainerName = this._getElementValidatorId(element);
