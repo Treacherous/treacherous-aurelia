@@ -21,7 +21,8 @@ var bundles = {
             "core-js",
             "event-js",
             "property-resolver",
-            "treacherous"
+            "treacherous",
+            "treacherous-view"
         ],
         "options": {
             "inject": true,

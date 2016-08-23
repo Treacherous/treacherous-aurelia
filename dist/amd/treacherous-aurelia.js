@@ -1,53 +1,17 @@
-define(["exports", "./helper/class-helper", "./strategy/validation-strategy", "./strategy/inline-strategy", "./binding-behaviours/validate-binding-behaviour"], function (exports, _classHelper, _validationStrategy, _inlineStrategy, _validateBindingBehaviour) {
+define(["exports", "treacherous-view"], function (exports, _treacherousView) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    Object.keys(_classHelper).forEach(function (key) {
-        if (key === "default" || key === "__esModule") return;
-        Object.defineProperty(exports, key, {
-            enumerable: true,
-            get: function () {
-                return _classHelper[key];
-            }
-        });
-    });
-    Object.keys(_validationStrategy).forEach(function (key) {
-        if (key === "default" || key === "__esModule") return;
-        Object.defineProperty(exports, key, {
-            enumerable: true,
-            get: function () {
-                return _validationStrategy[key];
-            }
-        });
-    });
-    Object.keys(_inlineStrategy).forEach(function (key) {
-        if (key === "default" || key === "__esModule") return;
-        Object.defineProperty(exports, key, {
-            enumerable: true,
-            get: function () {
-                return _inlineStrategy[key];
-            }
-        });
-    });
-    Object.keys(_validateBindingBehaviour).forEach(function (key) {
-        if (key === "default" || key === "__esModule") return;
-        Object.defineProperty(exports, key, {
-            enumerable: true,
-            get: function () {
-                return _validateBindingBehaviour[key];
-            }
-        });
-    });
     exports.configure = configure;
     function configure(aurelia) {
-        aurelia.globalResources("./binding-behaviours/validate-binding-behaviour");
         aurelia.globalResources("./attributes/validation-group-attribute");
-        aurelia.globalResources("./attributes/validation-options-attribute");
-        aurelia.globalResources("./attributes/validate-property-attribute");
-        aurelia.globalResources("./elements/validation-summary-element");
+        aurelia.globalResources("./attributes/view-strategy-attribute");
+        aurelia.globalResources("./attributes/validate-attribute");
 
-        aurelia.container.registerInstance(_validationStrategy.ValidationStrategy, new _inlineStrategy.InlineStrategy());
+
+        aurelia.container.registerInstance(_treacherousView.ViewStrategyRegistry, _treacherousView.viewStrategyRegistry);
+        aurelia.container.registerInstance(_treacherousView.ViewTriggerRegistry, _treacherousView.viewTriggerRegistry);
     }
 });

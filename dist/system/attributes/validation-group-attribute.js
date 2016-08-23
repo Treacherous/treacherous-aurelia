@@ -3,7 +3,7 @@
 System.register(['aurelia-framework'], function (_export, _context) {
     "use strict";
 
-    var inject, customAttribute, _dec, _dec2, _class, ValidationGroupAttribute;
+    var inject, customAttribute, _dec, _class, ValidationGroupAttribute;
 
     
 
@@ -13,11 +13,9 @@ System.register(['aurelia-framework'], function (_export, _context) {
             customAttribute = _aureliaFramework.customAttribute;
         }],
         execute: function () {
-            _export('ValidationGroupAttribute', ValidationGroupAttribute = (_dec = customAttribute('validation-group'), _dec2 = inject(Element), _dec(_class = _dec2(_class = function () {
-                function ValidationGroupAttribute(element) {
+            _export('ValidationGroupAttribute', ValidationGroupAttribute = (_dec = customAttribute('validation-group'), _dec(_class = function () {
+                function ValidationGroupAttribute() {
                     
-
-                    this.element = element;
                 }
 
                 ValidationGroupAttribute.prototype.bind = function bind(binding, overrideContext) {
@@ -25,7 +23,7 @@ System.register(['aurelia-framework'], function (_export, _context) {
                 };
 
                 return ValidationGroupAttribute;
-            }()) || _class) || _class));
+            }()) || _class));
 
             _export('ValidationGroupAttribute', ValidationGroupAttribute);
         }

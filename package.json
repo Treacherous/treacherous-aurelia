@@ -29,7 +29,8 @@
       "aurelia-framework": "^1.0.1",
       "event-js": "0.1.*",
       "property-resolver": "0.0.*",
-      "treacherous": "0.12.*"
+      "treacherous": "0.12.*",
+      "treacherous-view": "grofit/treacherous-view@prototype"
     },
     "devDependencies": {
       "aurelia-pal-browser": "^1.0.0",
@@ -39,7 +40,8 @@
     }
   },
   "dependencies": {
-    "treacherous": "^0.12.0",
+    "treacherous": "0.12.*",
+    "treacherous-view": "grofit/treacherous-view#prototype",
     "aurelia-framework": "^1.0.1"
   },
   "devDependencies": {
@@ -125,10 +127,9 @@
     },
     "build": {
       "resources": [
-        "treacherous-aurelia/binding-behaviours/validate-binding-behaviour",
         "treacherous-aurelia/attributes/validation-group-attribute",
-        "treacherous-aurelia/attributes/validation-options-attribute",
-        "treacherous-aurelia/attributes/validate-property-attribute",
+        "treacherous-aurelia/attributes/view-strategy-attribute",
+        "treacherous-aurelia/attributes/validate-attribute",
         "treacherous-aurelia/elements/validation-summary-element"
       ]
     }

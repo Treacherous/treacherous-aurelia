@@ -1,3 +1,4 @@
+/*
 import {customElement, inlineView, inject, bindable} from "aurelia-framework";
 
 @customElement("validation-summary")
@@ -35,3 +36,4 @@ export class ValidationSummary {
         }
     }
 }
+    */

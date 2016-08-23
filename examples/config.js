@@ -23,6 +23,7 @@ System.config({
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.93",
     "treacherous": "npm:treacherous@0.12.0",
     "treacherous-aurelia": "../dist/commonjs",
+    "treacherous-view": "github:grofit/treacherous-view@prototype",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -207,6 +208,24 @@ System.config({
   },
   bundles: {
     "aurelia-bundle.min.js": [
+      "github:grofit/treacherous-view@prototype.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/example-usages/validate-property-binding.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/exposer.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/helpers/class-helper.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/helpers/element-helper.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/index.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/registries/view-strategy-registry.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/registries/view-trigger-registry.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/states/validation-state.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-strategies/inline-handler.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-strategies/inline-strategy.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/blur-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/change-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/init-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/interval-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/key-up-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/submit-trigger.js",
+      "github:grofit/treacherous-view@prototype/dist/commonjs/view-triggers/view-trigger-reference.js",
       "github:jspm/nodelibs-process@0.1.2.js",
       "github:jspm/nodelibs-process@0.1.2/index.js",
       "npm:aurelia-binding@1.0.1.js",

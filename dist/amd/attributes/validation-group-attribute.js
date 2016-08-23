@@ -8,13 +8,11 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
 
     
 
-    var _dec, _dec2, _class;
+    var _dec, _class;
 
-    var ValidationGroupAttribute = exports.ValidationGroupAttribute = (_dec = (0, _aureliaFramework.customAttribute)('validation-group'), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = function () {
-        function ValidationGroupAttribute(element) {
+    var ValidationGroupAttribute = exports.ValidationGroupAttribute = (_dec = (0, _aureliaFramework.customAttribute)('validation-group'), _dec(_class = function () {
+        function ValidationGroupAttribute() {
             
-
-            this.element = element;
         }
 
         ValidationGroupAttribute.prototype.bind = function bind(binding, overrideContext) {
@@ -22,5 +20,5 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
         };
 
         return ValidationGroupAttribute;
-    }()) || _class) || _class);
+    }()) || _class);
 });

@@ -1,49 +1,83 @@
 <template>
-    <h2>Validate with nested objects and iterated elements</h2>
-    <section validation-group.bind="validationGroup">
+    <section validation-group.bind="validationGroup" view-strategy="inline">
+        <h2>Default auto validation</h2>
+        <p>This will automatically detect changes on the DOM and trigger validation changes when needed</p>
+        <p>There is a validation group available from the parent scope and same with a view strategy</p>
         <div>
             <label>Some Number</label>
-            <input value.bind="model.someNumber" validate-property="someNumber" />
+            <input value.bind="model.someNumber" validate="property: someNumber" />
         </div>
         <div>
             <label>Some Text</label>
-            <input value.bind="model.someText" validate-property="someText"/>
+            <input value.bind="model.someText" validate="property: someText"/>
         </div>
         <div>
             <label>Some Nested Number</label>
-            <input value.bind="model.someNestedObject.someNumber" validate-property="someNestedObject.someNumber"/>
+            <input value.bind="model.someNestedObject.someNumber" validate="property: someNestedObject.someNumber"/>
         </div>
-        <div validate-property="someArray"></div>
+        <div validate="property: someArray"></div>
         <div repeat.for="i of model.someArray.length">
             <label>Some Array - Index ${i + 1}</label>
-            <input value.bind="model.someArray[i]" validate-property.bind="'someArray[' + i + ']'"/>
+            <input value.bind="model.someArray[i]" validate="property.bind: 'someArray[' + i + ']'"/>
         </div>
     </section>
 
-    <h2>Validation Summary element</h2>
-    <section validation-group.bind="validationGroup">
-        <validation-summary></validation-summary>
-    </section>
-
-    <h2>Automatic Validation</h2>
-    <section validation-group.bind="validationGroup">
+    <section>
+        <h2>Setting group and strategy per validator</h2>
+        <p>You can also manually set the validation group and view strategy per element</p>
+        <p>It will behave the same as above however it uses the more verbose PER element overrides</p>
         <div>
             <label>Some Number</label>
-            <input value.bind="model.someNumber & validate" />
+            <input value.bind="model.someNumber" validate="property: someNumber; validation-group.bind: validationGroup; view-strategy: inline"/>
         </div>
         <div>
             <label>Some Text</label>
-            <input value.bind="model.someText & validate"/>
+            <input value.bind="model.someText" validate="property: someText; validation-group.bind: validationGroup; view-strategy: inline"/>
         </div>
-        <!-- THESE BITS WONT WORK YET
         <div>
             <label>Some Nested Number</label>
-            <input value.bind="model.someNestedObject.someNumber & validate"/>
+            <input value.bind="model.someNestedObject.someNumber" validate="property: someNestedObject.someNumber; validation-group.bind: validationGroup; view-strategy: inline"/>
         </div>
-        <div repeat.for="i of model.someArray.length">
-            <label>Some Array - Index ${i + 1}</label>
-            <input value.bind="model.someArray[i]  & validate"/>
-        </div>
-        -->
     </section>
+
+    <section validation-group.bind="validationGroup" view-strategy="inline">
+        <h2>Using view triggers</h2>
+        <p>You can provide custom validation triggers to tell the elements how to trigger validation</p>
+        <p>You can use the <code>validation-triggers</code> attribute and provide as many triggers as you wish</p>
+        <p>If you need to provide arguments to your trigger you can add it using <code>{triggerName}-trigger</code> attribute</p>
+        <div>
+            <label>Some Number</label>
+            <input value.bind="model.someNumber" validate="property: someNumber" validation-triggers="interval" interval-trigger="interval: 1000" />
+        </div>
+        <div>
+            <label>Some Text</label>
+            <input value.bind="model.someText" validate="property: someText" validation-triggers="blur"/>
+        </div>
+        <div>
+            <label>Some Nested Number</label>
+            <input value.bind="model.someNestedObject.someNumber" validate="property: someNestedObject.someNumber" validation-triggers="keyup, change"/>
+        </div>
+    </section>
+
+    <section validation-group.bind="validationGroup" view-strategy="inline">
+        <h2>Using form submission triggers</h2>
+        <p>You can tell elements to only re-validate when a form is submitted</p>
+        <p>It is just a trigger but it is easy enough to use</p>
+        <form>
+            <div>
+                <label>Some Number</label>
+                <input value.bind="model.someNumber" validate="property: someNumber" validation-triggers="submit"/>
+            </div>
+            <div>
+                <label>Some Text</label>
+                <input value.bind="model.someText" validate="property: someText" validation-triggers="submit"/>
+            </div>
+            <div>
+                <label>Some Nested Number</label>
+                <input value.bind="model.someNestedObject.someNumber" validate="property: someNestedObject.someNumber" validation-triggers="submit"/>
+            </div>
+            <input type="submit" value="Submit Form" />
+        </form>
+    </section>
+
 </template>

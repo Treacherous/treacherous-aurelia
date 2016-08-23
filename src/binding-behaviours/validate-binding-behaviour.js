@@ -1,3 +1,5 @@
+
+/*
 import {inject, noView} from "aurelia-framework";
 import {ValidationStrategy} from "../strategy/validation-strategy";
 
@@ -70,3 +72,4 @@ export class ValidateBindingBehavior
         return overrideContext["$index"] || overrideContext["$even"] || overrideContext["$odd"];
     }
 }
+    */
